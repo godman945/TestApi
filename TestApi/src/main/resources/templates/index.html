@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<!-- 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/jquery/jquery-1.12.4.js"></script>
+<script src="js/login/login.js"></script>
+</head>
+
+<body>
+<h2>Modal Login Form</h2>
+<button onclick="document.getElementById('id01').style.display='block'"	style="width: auto;">Login</button>
+<div id="id01" class="modal">
+	<form id="loginform" class="modal-content animate" ng-submit="submit()" ng-controller="loginSubmitController" action="checkLogin">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> 
+			<img src="login/img_avatar.jpg" alt="Avatar" class="avatar">
+		</div>
+		
+		<div class="container">
+			<label for="uname"><b>Username</b></label> 
+				 <input type="text" placeholder="Enter Username" ng-model="account" />
+			<label for="psw"><b>Password</b></label> 
+				<input type="text" placeholder="Enter Password" ng-model="pd"  />
+			<button type="submit">Login</button>
+			<div style="color:red;">{{ message }}</div>
+		</div>
+	</form>
+</div>
+
+
+
+      
+
+</body>
+</html>
+
+
+
+
+
